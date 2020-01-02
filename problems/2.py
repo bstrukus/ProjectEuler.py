@@ -21,4 +21,4 @@ while fN < limit:
     fN1 = fN
     fN = fN1 + fN2
 
-print(f'Sum = {sum}')
+print(f'2.) {sum}')
