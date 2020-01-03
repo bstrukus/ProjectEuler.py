@@ -11,24 +11,20 @@ def isPrime(num):
             return False
     return True;
 
-def getPrimesLessThan(limit):
-    primes = []
-    for i in range(1, limit, 2):
-        if isPrime(i):
-            primes.append(i)
-    return primes
-    
-def getPrimeFactorsOf(num):
-    factors = []
-    primes = getPrimesLessThan(num)
-    for i in primes:
-        if num % i == 0:
-            factors.append(i)
-    
-    return factors
+def getLargestPrimeFactorOf(num):
+    if isPrime(num):
+        return num
+        
+    maxTestableValue = num // 2
+    #print(f'Max testable value of {num} is {maxTestableValue}')
+    for i in range(2, maxTestableValue):
+        if isPrime(i) and num % i == 0:
+            #print(f'Factor found = {i}')
+            return getLargestPrimeFactorOf(num // i)
+            
 
+# Main code
 num = 600851475143
-#num = 13195
 
-largestPrimeFactor = getPrimeFactorsOf(num).pop()
+largestPrimeFactor = getLargestPrimeFactorOf(num)
 print(f'Largest prime factor of {num} is {largestPrimeFactor}')
