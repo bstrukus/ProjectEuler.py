@@ -9,7 +9,7 @@ def isPrime(num):
     for i in range(2, maxTestableValue):
         if num % i == 0:
             return False
-    return True;
+    return True
 
 def getLargestPrimeFactorOf(num):
     if isPrime(num):
@@ -22,9 +22,8 @@ def getLargestPrimeFactorOf(num):
             #print(f'Factor found = {i}')
             return getLargestPrimeFactorOf(num // i)
             
+def main():
+    return getLargestPrimeFactorOf(600851475143)
 
-# Main code
-num = 600851475143
-
-largestPrimeFactor = getLargestPrimeFactorOf(num)
-print(f'Largest prime factor of {num} is {largestPrimeFactor}')
+if __name__ == '__main__':
+    print(main())
