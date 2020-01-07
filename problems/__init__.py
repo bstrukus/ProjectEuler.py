@@ -4,28 +4,26 @@ import problems.ex3
 import problems.ex4
 import problems.ex5
 
-problemCount = 5
+problemDictionary = [
+    problems.ex1.main,
+    problems.ex2.main,
+    problems.ex3.main,
+    problems.ex4.main,
+    problems.ex5.main
+]
 
 def printAnswer(problemNumber, answerValue):
     print(f'{problemNumber}.) {answerValue}')
 
-def getAnserFromProblemNumber(problemNumber):
-    if problemNumber == 1:
-        return problems.ex1.main()
-    elif problemNumber == 2:
-        return problems.ex2.main()
-    elif problemNumber == 3:
-        return problems.ex3.main()
-    elif problemNumber == 4:
-        return problems.ex4.main()
-    elif problemNumber == 5:
-        return problems.ex5.main()
-    else:
+def getAnswerFromProblemNumber(problemNumber):
+    if problemNumber > len(problemDictionary):
         return 'In progress...'
+    else:
+        return problemDictionary[problemNumber - 1]()
 
 def run(problemNumber = None):
     if problemNumber == None:
-        for i in range(problemCount):
-            printAnswer(i + 1, getAnserFromProblemNumber(i + 1))
+        for i in range(len(problemDictionary)):
+            printAnswer(i + 1, getAnswerFromProblemNumber(i + 1))
     else:
-        printAnswer(problemNumber, getAnserFromProblemNumber(problemNumber))
+        printAnswer(problemNumber, getAnswerFromProblemNumber(problemNumber))

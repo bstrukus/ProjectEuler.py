@@ -2,14 +2,14 @@
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 def divisibleByRange(rangeTotal):
-    numberRange = range(rangeTotal)
+    numberRange = range(rangeTotal, 0, -1)
     divisibleByAll = False
     currentNumber = rangeTotal
     
     while not divisibleByAll:
         divisibleByAll = True   # Assume True until proven otherwise
         for i in numberRange:
-            divisor = i + 1
+            divisor = i
             if currentNumber % divisor > 0:
                 divisibleByAll = False
                 break
@@ -21,4 +21,4 @@ def main():
     return divisibleByRange(20)
 
 if __name__ == '__main__':
-    main()
+    print(main())
