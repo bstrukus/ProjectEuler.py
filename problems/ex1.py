@@ -1,6 +1,11 @@
 # If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6, and 9. The sum of these multiples is 23.
 # Find the sum of all the multiples of 3 or 5 below 100.
 
+exampleValue = 10
+problemValue = 100
+
+mainValue = problemValue
+
 def pickySum(limit):
     sum = 0
     for i in range(limit):
@@ -10,7 +15,7 @@ def pickySum(limit):
     return sum
 
 def main():
-    return pickySum(1000)
+    return pickySum(mainValue)
 
 if __name__ == '__main__':
     print(main())

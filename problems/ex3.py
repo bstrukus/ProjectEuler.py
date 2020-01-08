@@ -1,6 +1,11 @@
 # The prime factors of 13195 are 5, 7, 13, and 29.
 # What is the larges prime factor of the number 600851475143?
 
+exampleValue = 13195
+problemValue = 600851475143
+
+mainValue = problemValue
+
 def isPrime(num):
     if num <= 1 or num % 2 == 0:
         return False
@@ -23,7 +28,7 @@ def getLargestPrimeFactorOf(num):
             return getLargestPrimeFactorOf(num // i)
             
 def main():
-    return getLargestPrimeFactorOf(600851475143)
+    return getLargestPrimeFactorOf(mainValue)
 
 if __name__ == '__main__':
     print(main())
