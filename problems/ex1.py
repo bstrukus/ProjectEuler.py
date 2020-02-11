@@ -8,13 +8,11 @@ from problems.problem import BaseProblem
 exampleValue = 10
 problemValue = 100
 
+useExampleValueInMain = False
+
 class Ex1(BaseProblem):
-    def __init__(self, runWithExampleValue):
+    def __init__(self):
         BaseProblem.__init__(self, exampleValue, problemValue)
-        
-        self.Value = problemValue
-        if runWithExampleValue == True:
-            self.Value = exampleValue
 
     def pickySum(self, limit):
         sum = 0
@@ -24,15 +22,12 @@ class Ex1(BaseProblem):
 
         return sum
 
-    def run(self):
-        return self.pickySum(self.Value)
+    def run(self, useExampleValue):
+        return self.pickySum(self.getProblemValue(useExampleValue))
 
 def main():
-    pickeeSum = Ex1(False)
-    return pickeeSum.run()
-    #return pickySum(mainValue)
+    pickeeSum = Ex1()
+    return pickeeSum.run(useExampleValueInMain)
 
 if __name__ == '__main__':
     print(main())
-    #myProblem = Ex1(exampleValue, problemValue)
-    #myProblem.run()

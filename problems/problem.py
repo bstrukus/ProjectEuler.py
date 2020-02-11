@@ -5,7 +5,12 @@
 class BaseProblem():
     def __init__(self, exampleVal, problemVal):
         self.exampleValue = exampleVal
-        self.problemVal = problemVal
+        self.problemValue = problemVal
+
+    def getProblemValue(self, useExampleValue):
+        if useExampleValue:
+            return self.exampleValue
+        return self.problemValue
 
     def run(self):
         print('Working on it!')

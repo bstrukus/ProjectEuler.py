@@ -2,7 +2,7 @@
 import cProfile
 
 from problems.ex1 import Ex1
-import problems.ex2
+from problems.ex2 import Ex2
 import problems.ex3
 import problems.ex4
 import problems.ex5
@@ -11,11 +11,11 @@ import problems.ex6
 import problems.importProblem
 
 useExampleValues = False
+#useExampleValues = True
 
 problemDictionary = [
-    #problems.ex1.main,
-    Ex1(useExampleValues)
-    #problems.ex2.main,
+    Ex1(),
+    Ex2()
     #problems.ex3.main,
     #problems.ex4.main,
     #problems.ex5.main,
@@ -29,7 +29,7 @@ def getAnswerFromProblemNumber(problemNumber):
     if problemNumber > len(problemDictionary):
         return 'In progress...'
     else:
-        return problemDictionary[problemNumber - 1].run()
+        return problemDictionary[problemNumber - 1].run(useExampleValues)
 
 def run(problemNumber = None):
     if problemNumber == None:
