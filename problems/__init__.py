@@ -3,20 +3,18 @@ import cProfile
 
 from problems.ex1 import Ex1
 from problems.ex2 import Ex2
-import problems.ex3
+from problems.ex3 import Ex3
 import problems.ex4
 import problems.ex5
 import problems.ex6
 
 import problems.importProblem
 
-useExampleValues = False
-#useExampleValues = True
+#useExampleValues = False
+useExampleValues = True
 
 problemDictionary = [
-    Ex1(),
-    Ex2()
-    #problems.ex3.main,
+    Ex1(), Ex2(), Ex3()
     #problems.ex4.main,
     #problems.ex5.main,
     #problems.ex6.main

@@ -16,6 +16,9 @@ class Prime:
         self.precalculatedPrimes = generatedPrimes
 
     def isPrime(self, num):
+        if num == 2:
+            return True
+
         if num <= 1 or num % 2 == 0:
             return False
 
