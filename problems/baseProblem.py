@@ -13,4 +13,4 @@ class BaseProblem():
         return self.problemValue
 
     def run(self, useExampleValue):
-        print('Working on it!')
+        return 'Working on it!'
