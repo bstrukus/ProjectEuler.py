@@ -4,10 +4,19 @@
 #What is the 10,001st prime number?
 
 from problems.baseProblem import BaseProblem
+from problems.prime import Prime
 
-exampleValue = 10001
-problemValue = 6
+exampleValue = 6
+problemValue = 10001
 
 class Ex7(BaseProblem):
     def __init__(self):
         BaseProblem.__init__(self, exampleValue, problemValue)
+
+    def findNthPrime(self, nthValue):
+        primeChecker = Prime(5)
+        print(str(primeChecker.getPrimes()))
+        return primeChecker.getNthPrime(nthValue)
+
+    def run(self, useExampleValue):
+        return self.findNthPrime(self.getProblemValue(useExampleValue))

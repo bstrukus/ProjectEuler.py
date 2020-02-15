@@ -6,6 +6,7 @@ class BaseProblem():
     def __init__(self, exampleVal, problemVal):
         self.exampleValue = exampleVal
         self.problemValue = problemVal
+        self.debugging = False
 
     def getProblemValue(self, useExampleValue):
         if useExampleValue:
@@ -14,3 +15,7 @@ class BaseProblem():
 
     def run(self, useExampleValue):
         return 'Working on it!'
+
+    def debugLog(self, message):
+        if (self.debugging):
+            print(message)

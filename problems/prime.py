@@ -15,6 +15,14 @@ class Prime:
             currentNumber += 1
         self.precalculatedPrimes = generatedPrimes
 
+    def getPrimes(self):
+        return self.precalculatedPrimes
+
+    def getNthPrime(self, nthValue):
+        if nthValue > len(self.precalculatedPrimes):
+            self.generatePrimes(nthValue)
+        return self.precalculatedPrimes[nthValue - 1]
+
     def isPrime(self, num):
         if num == 2:
             return True

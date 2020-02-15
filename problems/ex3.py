@@ -13,16 +13,14 @@ class Ex3(BaseProblem):
         BaseProblem.__init__(self, exampleValue, problemValue)
         self.primeChecker = Prime(10)
 
-    def run(self, useExampleValue):
-        return self.getLargestPrimeFactorOf(self.getProblemValue(useExampleValue))
-
     def getLargestPrimeFactorOf(self, num):
         if self.primeChecker.isPrime(num):
             return num
             
         maxTestableValue = num // 2
-        #print(f'Max testable value of {num} is {maxTestableValue}')
         for i in range(2, maxTestableValue):
             if self.primeChecker.isPrime(i) and num % i == 0:
-                #print(f'Factor found = {i}')
                 return self.getLargestPrimeFactorOf(num // i)
+
+    def run(self, useExampleValue):
+        return self.getLargestPrimeFactorOf(self.getProblemValue(useExampleValue))
