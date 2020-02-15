@@ -30,7 +30,7 @@ def getAnswerFromProblemNumber(problemNumber):
         return problemDictionary[problemNumber - 1].run(useExampleValues)
 
 def run(problemNumber = None):
-    if problemNumber == None:
+    if problemNumber == None or problemNumber == 0:
         for i in range(len(problemDictionary)):
             printAnswer(i + 1, getAnswerFromProblemNumber(i + 1))
     elif problemNumber == -1:
