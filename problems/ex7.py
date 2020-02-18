@@ -15,7 +15,6 @@ class Ex7(BaseProblem):
 
     def findNthPrime(self, nthValue):
         primeChecker = Prime(5)
-        print(str(primeChecker.getPrimes()))
         return primeChecker.getNthPrime(nthValue)
 
     def run(self, useExampleValue):
