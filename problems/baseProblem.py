@@ -6,7 +6,7 @@ class BaseProblem():
     def __init__(self, exampleVal, problemVal):
         self.exampleValue = exampleVal
         self.problemValue = problemVal
-        self.debugging = False
+        self.debugging = True
 
     def getProblemValue(self, useExampleValue):
         if useExampleValue:

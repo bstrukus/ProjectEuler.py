@@ -9,13 +9,14 @@ from problems.ex5 import Ex5
 from problems.ex6 import Ex6
 from problems.ex7 import Ex7
 from problems.ex8 import Ex8
+from problems.ex9 import Ex9
 
 useExampleValues = False
-#useExampleValues = True
+useExampleValues = True
 
 problemDictionary = [
     Ex1(), Ex2(), Ex3(), Ex4(), Ex5(),
-    Ex6(), Ex7(), Ex8()
+    Ex6(), Ex7(), Ex8(), Ex9()
 ]
 
 def printAnswer(problemNumber, answerValue):
