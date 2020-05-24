@@ -1,18 +1,10 @@
 #!/usr/bin/env python3
 import cProfile
 
-from problems.ex1 import Ex1
-from problems.ex2 import Ex2
-from problems.ex3 import Ex3
-from problems.ex4 import Ex4
-from problems.ex5 import Ex5
-from problems.ex6 import Ex6
-from problems.ex7 import Ex7
-from problems.ex8 import Ex8
-from problems.ex9 import Ex9
+from .problems import *
 
 useExampleValues = False
-useExampleValues = True
+#useExampleValues = True
 
 problemDictionary = [
     Ex1(), Ex2(), Ex3(), Ex4(), Ex5(),
@@ -26,7 +18,7 @@ def getAnswerFromProblemNumber(problemNumber):
     if problemNumber > len(problemDictionary):
         return 'In progress...'
     else:
-        return problemDictionary[problemNumber - 1].run(useExampleValues)
+        return problemDictionary[problemNumber - 1].run(True)
 
 def run(problemNumber = None):
     if problemNumber == None or problemNumber == 0:

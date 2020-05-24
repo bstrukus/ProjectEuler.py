@@ -2,7 +2,7 @@
 
 # Run all the exercise solutions!
 import sys
-import problems
+import euler
 
 def validate_input(inputValue):
     try:
@@ -14,10 +14,10 @@ def validate_input(inputValue):
 
 def main():
     if len(sys.argv) == 1:
-        problems.run()
+        euler.run()
     elif len(sys.argv) == 2:
         problemNumber = validate_input(sys.argv[1])
-        problems.run(problemNumber)
+        euler.run(problemNumber)
     else:
         print(f'Not sure what you wanted me to do with these {len(sys.argv)} arguments...')
         print('    Arguments: ', str(sys.argv))

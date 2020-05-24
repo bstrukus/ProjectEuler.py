@@ -3,7 +3,7 @@
 import sys
 #import ex1
 #from problem import Problem
-from problems.problem import BaseProblem
+from .problems import BaseProblem
 
 class ImportProblem(BaseProblem):
     pass
